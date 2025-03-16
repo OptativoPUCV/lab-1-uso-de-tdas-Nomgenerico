@@ -121,7 +121,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    int tamano = get_size((List *) cadena) ;
    if (tamano % 2 != 0) return 0 ;
-   char *cadenaAux = create_list() ;
+   List *cadenaAux = create_list() ;
    char *datoPrim = first((List *) cadena) ;
 
    while (datoPrim != NULL){
