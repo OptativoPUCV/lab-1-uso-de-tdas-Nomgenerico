@@ -131,7 +131,7 @@ int parentesisBalanceados(char *cadena) {
    
    while (primDato != NULL)
    {
-      printf("DEBUG PRIM %c  SEGUNDO  &c", *primDato, *ultDato) ;
+      printf("DEBUG PRIM %c  SEGUNDO  %c", *primDato, *ultDato) ;
       if (*primDato != *ultDato) return 0 ;
 
    }

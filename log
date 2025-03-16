@@ -565,3 +565,9 @@ exercises.c:134:14: error: too many arguments for format [-Werror=format-extra-a
 cc1.exe: all warnings being treated as errors
 Compilation failed
 0f2ef77
+Sun, Mar 16, 2025  1:43:46 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+af3761c
