@@ -43,7 +43,11 @@ Al finalizar retorna la lista creada.
 
 List* crea_lista() {
    List* L = create_list();
-   
+   for (short i = 1; i <= 10; i++)
+   {
+      L = (List *) realloc(L, sizeof(List) * i) ;
+      pushFront(L, &i) ;
+   }
    return L;
 }
 
