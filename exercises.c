@@ -139,7 +139,7 @@ int parentesisBalanceados(char *cadena) {
       if (*primDato != *ultDato - 1) return 0 ;
       primDato = next(copiaCadena) ;
       ultDato = next(copiaAlreves) ;
-      count ++ ;
+      count += 2 ;
 
    }
    
