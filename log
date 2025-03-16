@@ -114,3 +114,17 @@ Sun, Mar 16, 2025 11:36:40 AM:
  1 file changed, 2 insertions(+), 1 deletion(-)
  tests:  0|0
 bf5bb5d
+Sun, Mar 16, 2025 11:39:42 AM: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:65:21: error: dereferencing 'void *' pointer [-Werror]
+       suma += (int) *hola ;
+                     ^~~~~
+exercises.c:65:7: error: invalid use of void expression
+       suma += (int) *hola ;
+       ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+9c26b56
