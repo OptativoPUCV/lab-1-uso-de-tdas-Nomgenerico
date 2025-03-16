@@ -43,3 +43,13 @@ Sun, Mar 16, 2025 10:54:35 AM:
  tests:  1|4
 total_score: 10/70
 f3c6248
+Sun, Mar 16, 2025 11:01:54 AM: 
+ exercises.c | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:64:16: error: dereferencing pointer to incomplete type 'List {aka struct List}'
+       suma += L->data[i] ;
+                ^~
+Compilation failed
+4b4164b
