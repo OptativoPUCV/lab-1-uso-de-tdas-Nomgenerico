@@ -27,3 +27,13 @@ Sun, Mar 16, 2025 10:37:09 AM:
  1 file changed, 1 insertion(+), 1 deletion(-)
  tests:  0|0
 6da1f5b
+Sun, Mar 16, 2025 10:54:21 AM: 
+ exercises.c | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'crea_lista':
+exercises.c:51:4: error: expected ';' before '}' token
+    }
+    ^
+Compilation failed
+acd190e
