@@ -554,3 +554,14 @@ Sun, Mar 16, 2025  1:40:23 PM:
  tests:  4|1
 total_score: 50/70
 bc67278
+Sun, Mar 16, 2025  1:43:30 PM: 
+ exercises.c | 2 ++
+ 1 file changed, 2 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:134:14: error: too many arguments for format [-Werror=format-extra-args]
+       printf("DEBUG PRIM %c  SEGUNDO  &c", *primDato, *ultDato) ;
+              ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+0f2ef77
