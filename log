@@ -512,3 +512,14 @@ Sun, Mar 16, 2025  1:24:38 PM:
  tests:  5|1
 total_score: 50/70
 1d7a244
+Sun, Mar 16, 2025  1:39:48 PM: 
+ exercises.c | 26 ++++++++++++--------------
+ 1 file changed, 12 insertions(+), 14 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:124:8: error: 'i' undeclared (first use in this function)
+    for(i = 0 ; cadena[i] ; i++){
+        ^
+exercises.c:124:8: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+09f90da
