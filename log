@@ -313,3 +313,26 @@ Sun, Mar 16, 2025 12:48:24 PM:
  tests:  5|1
 total_score: 50/70
 e3608ae
+Sun, Mar 16, 2025  1:20:21 PM: 
+ exercises.c | 3 +++
+ 1 file changed, 3 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:122:26: error: passing argument 1 of 'get_size' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    int tamano = get_size(cadena) ;
+                          ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:35:5: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ int get_size(List *L);
+     ^~~~~~~~
+In file included from test.c:5:0:
+exercises.c:123:15: error: invalid operands to binary % (have 'char *' and 'int')
+    if (cadena % 2 != 0) return 0 ;
+               ^
+exercises.c:122:8: error: unused variable 'tamano' [-Werror=unused-variable]
+    int tamano = get_size(cadena) ;
+        ^~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+d5fd196
