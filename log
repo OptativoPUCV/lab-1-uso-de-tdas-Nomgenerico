@@ -145,3 +145,28 @@ Sun, Mar 16, 2025 12:29:27 PM:
  tests:  3|2
 total_score: 40/70
 a960354
+Sun, Mar 16, 2025 12:42:07 PM: 
+ exercises.c | 14 ++++++++++++++
+ 1 file changed, 14 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:97:24: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    Stack * stack_aux = create_stack ;
+                        ^~~~~~~~~~~~
+exercises.c:101:7: error: expected ';' before 'dato'
+       dato = top(P1, *dato) ;
+       ^~~~
+exercises.c:107:7: error: expected ';' before 'push'
+       push(P2, dato)
+       ^~~~
+exercises.c:109:7: error: too few arguments to function 'pop'
+       pop() ;
+       ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:17:7: note: declared here
+ void *pop(Stack *stack) { return popFront(stack); }
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+de4fa29
