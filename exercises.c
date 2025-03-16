@@ -61,8 +61,8 @@ int sumaLista(List *L) {
    int suma = 1;
    int tamano = get_size(L) ;
    for(int i = 0 ; i < tamano ; i++){
-      void *hola = next(L) ;
-      suma += (int) *hola ;
+      int *hola = next(L) ;
+      suma += *hola ;
    }
    return suma ;
 }
