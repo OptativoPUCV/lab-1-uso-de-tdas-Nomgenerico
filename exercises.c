@@ -121,7 +121,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 int parentesisBalanceados(char *cadena) {
    List *copiaCadena = create_list() ;
    List *copiaAlreves = create_list() ;
-   for(i = 0 ; cadena[i] ; i++){
+   for(int i = 0 ; cadena[i] ; i++){
       pushBack(copiaCadena, cadena[i]) ;
       pushFront(copiaAlreves, cadena[i]) ;
    }
