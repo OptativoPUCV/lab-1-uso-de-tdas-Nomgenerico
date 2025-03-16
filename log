@@ -336,3 +336,80 @@ exercises.c:122:8: error: unused variable 'tamano' [-Werror=unused-variable]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 d5fd196
+Sun, Mar 16, 2025  1:20:52 PM: 
+ exercises.c | 16 ++++++++++++++--
+ 1 file changed, 14 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:122:8: error: 'tamano' undeclared (first use in this function)
+    if (tamano % 2 != 0) return 0 ;
+        ^~~~~~
+exercises.c:122:8: note: each undeclared identifier is reported only once for each function it appears in
+exercises.c:123:22: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    char *cadenaAux = create_list() ;
+                      ^~~~~~~~~~~
+exercises.c:124:27: error: passing argument 1 of 'first' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    char *datoPrim = first(cadena) ;
+                           ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:10:7: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void* first(List *L);
+       ^~~~~
+In file included from test.c:5:0:
+exercises.c:126:17: error: passing argument 1 of 'pushFront' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       pushFront(cadenaAux, datoPrim) ;
+                 ^~~~~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:17:6: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void pushFront(List *L, void *dato);
+      ^~~~~~~~~
+In file included from test.c:5:0:
+exercises.c:127:23: error: passing argument 1 of 'next' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       datoPrim = next(cadena) ;
+                       ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:14:7: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void* next(List *L);
+       ^~~~
+In file included from test.c:5:0:
+exercises.c:130:21: error: passing argument 1 of 'first' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    datoPrim = first(cadena) ;
+                     ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:10:7: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void* first(List *L);
+       ^~~~~
+In file included from test.c:5:0:
+exercises.c:131:26: error: passing argument 1 of 'first' from incompatible pointer type [-Werror=incompatible-pointer-types]
+    char *datoUlt = first(cadena) ;
+                          ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:10:7: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void* first(List *L);
+       ^~~~~
+In file included from test.c:5:0:
+exercises.c:134:23: error: passing argument 1 of 'next' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       datoPrim = next(cadena) ;
+                       ^~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:14:7: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void* next(List *L);
+       ^~~~
+In file included from test.c:5:0:
+exercises.c:135:22: error: passing argument 1 of 'next' from incompatible pointer type [-Werror=incompatible-pointer-types]
+       datoUlt = next(cadenaAux) ;
+                      ^~~~~~~~~
+In file included from exercises.c:6:0,
+                 from test.c:5:
+arraylist.h:14:7: note: expected 'List * {aka struct List *}' but argument is of type 'char *'
+ void* next(List *L);
+       ^~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+8bc2dfc
