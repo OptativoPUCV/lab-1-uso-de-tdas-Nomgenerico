@@ -135,7 +135,6 @@ int parentesisBalanceados(char *cadena) {
    int count = 0 ;
    while (count != tamano)
    {
-      printf("DEBUG PRIM %c  SEGUNDO  %c", *primDato, *ultDato) ;
       if (*primDato == '(') {
          if (*primDato != *ultDato - 1) return 0 ;
       }
