@@ -170,3 +170,31 @@ stack.h:17:7: note: declared here
 cc1.exe: all warnings being treated as errors
 Compilation failed
 de4fa29
+Sun, Mar 16, 2025 12:43:36 PM: 
+ exercises.c | 11 ++++++-----
+ 1 file changed, 6 insertions(+), 5 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'copia_pila':
+exercises.c:97:24: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    Stack * stack_aux = create_stack ;
+                        ^~~~~~~~~~~~
+exercises.c:102:14: error: too many arguments to function 'top'
+       dato = top(P1, *dato) ;
+              ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: declared here
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+In file included from test.c:5:0:
+exercises.c:109:14: error: too many arguments to function 'top'
+       dato = top(stack_aux, *dato) ;
+              ^~~
+In file included from exercises.c:7:0,
+                 from test.c:5:
+stack.h:14:7: note: declared here
+ void *top(Stack *stack) { return first(stack); }
+       ^~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+6479986
