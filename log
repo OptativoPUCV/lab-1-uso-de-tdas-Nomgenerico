@@ -109,3 +109,8 @@ exercises.c:64:18: error: dereferencing pointer to incomplete type 'List {aka st
                   ^~
 Compilation failed
 4710627
+Sun, Mar 16, 2025 11:36:40 AM: 
+ exercises.c | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+ tests:  0|0
+bf5bb5d
