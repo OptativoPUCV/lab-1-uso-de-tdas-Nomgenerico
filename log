@@ -495,3 +495,14 @@ arraylist.h:14:7: note: expected 'List * {aka struct List *}' but argument is of
 cc1.exe: all warnings being treated as errors
 Compilation failed
 58fc9d6
+Sun, Mar 16, 2025  1:24:02 PM: 
+ exercises.c | 16 ++++++++--------
+ 1 file changed, 8 insertions(+), 8 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:124:22: error: initialization from incompatible pointer type [-Werror=incompatible-pointer-types]
+    char *cadenaAux = create_list() ;
+                      ^~~~~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+062530b

@@ -119,23 +119,23 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-   int tamano = get_size(cadena) ;
+   int tamano = get_size((List *) cadena) ;
    if (tamano % 2 != 0) return 0 ;
    char *cadenaAux = create_list() ;
-   char *datoPrim = first(cadena) ;
+   char *datoPrim = first((List *) cadena) ;
 
    while (datoPrim != NULL){
-      pushFront(cadenaAux, datoPrim) ;
-      datoPrim = next(cadena) ;
+      pushFront((List *)cadenaAux, datoPrim) ;
+      datoPrim = next((List *)cadena) ;
    }
 
-   datoPrim = first(cadena) ;
-   char *datoUlt = first(cadena) ;
-   
+   datoPrim = first((List *)cadena) ;
+   char *datoUlt = first((List *)cadena) ;
+
    while (datoPrim != NULL){
       if (datoPrim != datoUlt) return 0 ;
-      datoPrim = next(cadena) ;
-      datoUlt = next(cadenaAux) ;
+      datoPrim = next((List *)cadena) ;
+      datoUlt = next((List *) cadenaAux) ;
    }
    return 1;
 }
