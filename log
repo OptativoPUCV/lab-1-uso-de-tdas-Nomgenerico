@@ -99,3 +99,13 @@ exercises.c:64:18: error: dereferencing pointer to incomplete type 'List {aka st
                   ^~
 Compilation failed
 15d56ee
+Sun, Mar 16, 2025 11:34:18 AM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+In file included from test.c:5:0:
+exercises.c: In function 'sumaLista':
+exercises.c:64:18: error: dereferencing pointer to incomplete type 'List {aka struct List}'
+       suma += *(L->data[i]) ;
+                  ^~
+Compilation failed
+4710627
