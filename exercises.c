@@ -119,33 +119,23 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 */
 
 int parentesisBalanceados(char *cadena) {
-
-   List *copiaCadena = create_list() ;
-   List *copiaAlreves = create_list() ;
-   for(int i = 0 ; cadena[i] ; i++){
-      pushBack(copiaCadena, &cadena[i]) ;
-      pushFront(copiaAlreves, &cadena[i]) ;
-   }
-   int tamano = get_size(copiaCadena) ;
-   if (tamano % 2 != 0) return 0 ;
-
-   char *primDato = first(copiaCadena) ;
-   char *ultDato = first(copiaAlreves) ;
-   
-   int count = 0 ;
-   while (count != tamano)
-   {
-      if (*primDato == '(') {
-         if (*primDato != *ultDato - 1) return 0 ;
+   Stack* stack = create_stack();
+   int i = 0;
+   while (cadena[i] != '\0') {
+      if (cadena[i] == '(') {
+         push(stack, &cadena[i]);
+      } else if (cadena[i] == ')') {
+         if (top(stack) == NULL) {
+            return 0;
+         } else {
+            pop(stack);
+         }
       }
-      else if (*primDato != *ultDato - 2) return 0 ;
-      primDato = next(copiaCadena) ;
-      ultDato = next(copiaAlreves) ;
-      count += 2 ;
-
+      i++;
    }
-   
-
-   return 1;
+   if (top(stack) == NULL) {
+      return 1;
+   } else {
+      return 0;
+   }
 }
-
