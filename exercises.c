@@ -11,12 +11,12 @@
 //Funciones auxiliares que puedes utilizar para debuggear tus ejercicios
 //NO MODIFICAR
 void imprime_lista(List *L) {
-   int *dato;
-   dato = (int*)first(L);
+   char *dato;
+   dato = (char*)first(L);
    printf("[");
    while(dato != NULL) {
-      printf("%d ", *dato);
-      dato = (int*)next(L);
+      printf("%c ", *dato);
+      dato = (char*)next(L);
    }
    printf("]\n");
 
@@ -144,6 +144,9 @@ int parentesisBalanceados(char *cadena) {
       count += 2 ;
 
    }
+   imprime_lista(copiaCadena) ;
+   printf("\n") ;
+   imprime_lista(copiaAlreves) ;
    
 
    return 1;
