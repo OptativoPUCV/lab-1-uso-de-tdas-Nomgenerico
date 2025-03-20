@@ -120,7 +120,7 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
 
-   List *copiaCadena = create_list() ;
+   /* List *copiaCadena = create_list() ;
    List *copiaAlreves = create_list() ;
    for(int i = 0 ; cadena[i] ; i++){
       pushBack(copiaCadena, &cadena[i]) ;
@@ -148,7 +148,39 @@ int parentesisBalanceados(char *cadena) {
    printf("\n") ;
    imprime_lista(copiaAlreves) ;
    
+   
 
+   */
+   List* l = crea_lista();
+   List* Linv = crea_lista();
+   for(int i = 0 ; cadena[i]; i++){
+      pushBack(l, &cadena[i]);
+      pushFront(Linv, &cadena[i]);
+   }
+   int total = get_size(l);
+   if(total % 2 != 0) return 0;
+   char* primero = first(l);
+   char* ultimo = first(Linv);
+   int suma = 0 ;
+   for(int i = 0 ; i < total; i++){
+      if(primero == '{' &&ultimo == '}') {
+         suma += 2;
+      }
+      if(primero == '[' &&ultimo == ']') {
+         suma += 2;
+      }
+      if(primero == '(' &&ultimo == ')') {
+         suma += 2;
+      }
+      primero = next(l);
+      ultimo = next(Linv);
+   }
+   printf("%d", suma);
+   if(suma == total) return 1;
+   imprime_lista(l);
+   printf("\n");
+   imprime_lista(Linv);
+   return 0;
    return 1;
 }
 
