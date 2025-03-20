@@ -166,7 +166,7 @@ int parentesisBalanceados(char *cadena) {
       if(*primero == '{' && *ultimo == '}') {
          suma += 2;
       }
-      if(*rimero == '[' && *ultimo == ']') {
+      if(*primero == '[' && *ultimo == ']') {
          suma += 2;
       }
       if(*primero == '(' && *ultimo == ')') {

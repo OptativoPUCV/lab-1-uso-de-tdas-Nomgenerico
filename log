@@ -667,3 +667,9 @@ exercises.c:169:11: error: 'rimero' undeclared (first use in this function)
 exercises.c:169:11: note: each undeclared identifier is reported only once for each function it appears in
 Compilation failed
 6b2069e
+Thu, Mar 20, 2025  8:27:22 PM: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  4|1
+total_score: 50/70
+f70592d
