@@ -656,3 +656,14 @@ exercises.c:172:34: error: comparison between pointer and integer [-Werror]
 cc1.exe: all warnings being treated as errors
 Compilation failed
 c4760bd
+Thu, Mar 20, 2025  8:27:11 PM: 
+ exercises.c | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:169:11: error: 'rimero' undeclared (first use in this function)
+       if(*rimero == '[' && *ultimo == ']') {
+           ^~~~~~
+exercises.c:169:11: note: each undeclared identifier is reported only once for each function it appears in
+Compilation failed
+6b2069e
