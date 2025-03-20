@@ -151,8 +151,8 @@ int parentesisBalanceados(char *cadena) {
    
 
    */
-   List* l = crea_lista();
-   List* Linv = crea_lista();
+   List* l = create_list();
+   List* Linv = create_list();
    for(int i = 0 ; cadena[i]; i++){
       pushBack(l, &cadena[i]);
       pushFront(Linv, &cadena[i]);
@@ -181,6 +181,5 @@ int parentesisBalanceados(char *cadena) {
    printf("\n");
    imprime_lista(Linv);
    return 0;
-   return 1;
 }
 
