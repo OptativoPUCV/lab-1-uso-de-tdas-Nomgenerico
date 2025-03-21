@@ -690,3 +690,20 @@ Fri, Mar 21, 2025  5:43:27 PM:
  tests:  4|1
 total_score: 50/70
 ffabd81
+Fri, Mar 21, 2025  5:52:57 PM: 
+ exercises.c | 6 ++++++
+ 1 file changed, 6 insertions(+)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:145:8: error: unused variable 'count' [-Werror=unused-variable]
+    int count = 0 ;
+        ^~~~~
+exercises.c:143:10: error: unused variable 'ultDato' [-Werror=unused-variable]
+    char *ultDato = top(copiaInvertida) ;
+          ^~~~~~~
+exercises.c:142:10: error: unused variable 'primDato' [-Werror=unused-variable]
+    char *primDato = top(cadenaNormal) ;
+          ^~~~~~~~
+cc1.exe: all warnings being treated as errors
+Compilation failed
+3cea914
