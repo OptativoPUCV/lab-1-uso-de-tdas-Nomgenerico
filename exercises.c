@@ -136,7 +136,7 @@ int parentesisBalanceados(char *cadena) {
       dato = top(aux) ;
       pop(aux) ;
    }
-
+   printf("%d", tamano)  ;
    if (tamano % 2 != 0) return 0 ;
    /*
    char *primDato = top(cadenaNormal) ;
