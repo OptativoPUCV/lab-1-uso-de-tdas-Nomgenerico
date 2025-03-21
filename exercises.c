@@ -139,7 +139,7 @@ int parentesisBalanceados(char *cadena) {
    }
    printf("%d", tamano)  ;
    if (tamano % 2 != 0) return 0 ;
-   /*
+   
    char *primDato = top(cadenaNormal) ;
    char *ultDato = top(copiaInvertida) ;
    
@@ -159,7 +159,7 @@ int parentesisBalanceados(char *cadena) {
       count += 2 ;
 
    }
-   */
+   
    
    imprime_y_vacia_pila(copiaInvertida) ;
    printf("\n") ;
