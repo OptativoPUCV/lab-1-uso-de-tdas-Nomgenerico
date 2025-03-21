@@ -160,9 +160,6 @@ int parentesisBalanceados(char *cadena) {
    }
    
    
-   imprime_y_vacia_pila(copiaInvertida) ;
-   printf("\n") ;
-   imprime_y_vacia_pila(cadenaNormal) ;
    return 1 ;
 }
 
