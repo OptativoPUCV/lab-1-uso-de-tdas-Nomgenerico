@@ -725,3 +725,16 @@ Fri, Mar 21, 2025  5:55:28 PM:
  tests:  4|1
 total_score: 50/70
 7579463
+Fri, Mar 21, 2025  6:09:01 PM: 
+ exercises.c | 5 +++--
+ 1 file changed, 3 insertions(+), 2 deletions(-)
+In file included from test.c:5:0:
+exercises.c: In function 'parentesisBalanceados':
+exercises.c:129:18: error: expected '=', ',', ';', 'asm' or '__attribute__' before '++' token
+       int tamano ++ ;
+                  ^~
+exercises.c:129:21: error: expected expression before ';' token
+       int tamano ++ ;
+                     ^
+Compilation failed
+fac86c4

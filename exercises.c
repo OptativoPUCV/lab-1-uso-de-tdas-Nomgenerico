@@ -122,16 +122,17 @@ int parentesisBalanceados(char *cadena) {
 
    Stack *copiaInvertida = create_stack() ;
    Stack *aux = create_stack() ;
+   int tamano = 0 ;
    for(int i = 0 ; cadena[i] ; i++){
       push(copiaInvertida, &cadena[i]) ;
       push(aux, &cadena[i]) ;
+      int tamano ++ ;
    }
    char *dato = top(aux) ;
-   int tamano = 0 ;
+   
    imprime_y_vacia_pila(aux) ;
    Stack *cadenaNormal = create_stack() ;
    while (dato != NULL) {
-      tamano ++ ;
       push(cadenaNormal, dato) ;
       dato = top(aux) ;
       pop(aux) ;
