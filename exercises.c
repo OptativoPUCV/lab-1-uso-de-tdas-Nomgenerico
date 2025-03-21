@@ -138,12 +138,12 @@ int parentesisBalanceados(char *cadena) {
    }
 
    if (tamano % 2 != 0) return 0 ;
-
+   /*
    char *primDato = top(cadenaNormal) ;
    char *ultDato = top(copiaInvertida) ;
    
    int count = 0 ;
-   /*
+   
    while (count != tamano)
    {
       if (*primDato == '(') {
