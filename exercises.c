@@ -130,7 +130,6 @@ int parentesisBalanceados(char *cadena) {
    }
    char *dato = top(aux) ;
    
-   imprime_y_vacia_pila(aux) ;
    Stack *cadenaNormal = create_stack() ;
    while (dato != NULL) {
       push(cadenaNormal, dato) ;
