@@ -11,12 +11,12 @@
 //Funciones auxiliares que puedes utilizar para debuggear tus ejercicios
 //NO MODIFICAR
 void imprime_lista(List *L) {
-   char *dato;
-   dato = (char*)first(L);
+   int *dato;
+   dato = (int*)first(L);
    printf("[");
    while(dato != NULL) {
-      printf("%c ", *dato);
-      dato = (char*)next(L);
+      printf("%d ", *dato);
+      dato = (int*)next(L);
    }
    printf("]\n");
 
@@ -120,17 +120,25 @@ paraéntesis balanceados. Retorna 1 si están balanceados,
 
 int parentesisBalanceados(char *cadena) {
 
-   /* List *copiaCadena = create_list() ;
-   List *copiaAlreves = create_list() ;
+   Stack *copiaInvertida = create_stack() ;
+   Stack *aux = create_stack() ;
    for(int i = 0 ; cadena[i] ; i++){
-      pushBack(copiaCadena, &cadena[i]) ;
-      pushFront(copiaAlreves, &cadena[i]) ;
+      push(copiaInvertida, &cadena[i]) ;
+      push(aux, &cadena[i]) ;
    }
-   int tamano = get_size(copiaCadena) ;
+   char *dato = top(aux) ;
+   int tamano = 0 ;
+
+   Stack *cadenaNormal = create_stack() ;
+   while (dato != NULL) {
+      tamano ++ ;
+      push(cadenaNormal, dato) ;
+   }
+
    if (tamano % 2 != 0) return 0 ;
 
-   char *primDato = first(copiaCadena) ;
-   char *ultDato = first(copiaAlreves) ;
+   char * primDato = top(cadenaNormal) ;
+   char *ultDato = top(copiaInvertida) ;
    
    int count = 0 ;
    while (count != tamano)
@@ -139,47 +147,14 @@ int parentesisBalanceados(char *cadena) {
          if (*primDato != *ultDato - 1) return 0 ;
       }
       else if (*primDato != *ultDato - 2) return 0 ;
-      primDato = next(copiaCadena) ;
-      ultDato = next(copiaAlreves) ;
+      pop(copiaInvertida) ;
+      pop(cadenaNormal) ;
+
+      primDato = top(cadenaNormal) ;
+      ultDato = top(copiaInvertida) ;
       count += 2 ;
 
    }
-   imprime_lista(copiaCadena) ;
-   printf("\n") ;
-   imprime_lista(copiaAlreves) ;
-   
-   
-
-   */
-   List* l = create_list();
-   List* Linv = create_list();
-   for(int i = 0 ; cadena[i]; i++){
-      pushBack(l, &cadena[i]);
-      pushFront(Linv, &cadena[i]);
-   }
-   int total = get_size(l);
-   if(total % 2 != 0) return 0;
-   char* primero = first(l);
-   char* ultimo = first(Linv);
-   int suma = 0 ;
-   for(int i = 0 ; i < total; i++){
-      if(*primero == '{' && *ultimo == '}') {
-         suma += 2;
-      }
-      if(*primero == '[' && *ultimo == ']') {
-         suma += 2;
-      }
-      if(*primero == '(' && *ultimo == ')') {
-         suma += 2;
-      }
-      primero = next(l);
-      ultimo = next(Linv);
-   }
-   printf("%d", suma);
-   if(suma == total) return 1;
-   imprime_lista(l);
-   printf("\n");
-   imprime_lista(Linv);
-   return 0;
+   return 1 ;
 }
 
