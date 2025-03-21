@@ -126,7 +126,7 @@ int parentesisBalanceados(char *cadena) {
    for(int i = 0 ; cadena[i] ; i++){
       push(copiaInvertida, &cadena[i]) ;
       push(aux, &cadena[i]) ;
-      int tamano ++ ;
+      tamano ++ ;
    }
    char *dato = top(aux) ;
    
