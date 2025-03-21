@@ -133,6 +133,8 @@ int parentesisBalanceados(char *cadena) {
    while (dato != NULL) {
       tamano ++ ;
       push(cadenaNormal, dato) ;
+      dato = top(aux) ;
+      pop(aux) ;
    }
 
    if (tamano % 2 != 0) return 0 ;
